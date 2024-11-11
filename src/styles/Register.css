@@ -1,0 +1,87 @@
+/* src/styles/Register.css */
+
+.register-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.register-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.register-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.register-button:hover {
+  background-color: #45a049;
+}
+
+.login-prompt {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.login-link {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+
+
+.requirements-message {
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.requirement {
+  list-style-type: none;
+  color: #e57373; /* Rojo claro */
+  transition: color 0.3s;
+}
+
+.requirement.valid {
+  color: #4caf50; /* Verde claro */
+}
+
+.requirement::before {
+  content: '• ';
+}
+
+.valid::before {
+  content: '✓ ';
+}

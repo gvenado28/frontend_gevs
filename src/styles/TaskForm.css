@@ -1,0 +1,25 @@
+.task-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .task-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    margin-right: 10px;
+  }
+  
+  .task-button {
+    padding: 10px 20px;
+    background-color: #61dafb;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .task-button:hover {
+    background-color: #21a1f1;
+  }
+  
