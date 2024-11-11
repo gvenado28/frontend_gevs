@@ -1,0 +1,47 @@
+# .github/workflows/ci.yml
+
+name: CI Workflow
+
+# Definir los eventos que activarán este workflow
+on:
+  push:
+    branches:
+      - develop
+      - main  # Se ejecutará cuando haya un push en develop o main
+  pull_request:
+    branches:
+      - develop  # Se ejecutará cuando haya un PR dirigido a develop
+
+# Jobs define las tareas que se realizarán
+jobs:
+  build:
+    # Selecciona el sistema operativo
+    runs-on: ubuntu-latest
+
+    # Definir los pasos a ejecutar en el job
+    steps:
+      # 1. Configura el repositorio
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      # 2. Configura la versión de Node.js (si es un proyecto Node.js)
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      # 3. Instala dependencias
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Ejecuta las pruebas
+      - name: Run tests
+        run: npm test
+
+      # 5. Linter (opcional)
+      - name: Run Linter
+        run: npm run lint
+
+      # 6. Build del proyecto
+      - name: Build project
+        run: npm run build
